@@ -6,30 +6,24 @@ using System.Threading.Tasks;
 
 namespace Delegate
 {
-    public delegate bool eventdelegate(Event @event);
+
+    // Lambda Expression is annonymous functions that contains expressions or sequences of operators, it has to do with = and >
+    // a short block of code that accepts parameters and returns a value,it does not execute on its own. it is written in place of a delegate instance  
     public class Event
     {
-        //Delegate
+
 
         public string Type { get; set; }
         public string Vendor { get; set; }
         public string Venue { get; set; }
         public int Price { get; set; }
         public int Capacity { get; set; }
-        public static void CloneIt(List<Event> events, eventdelegate planning)
-        {
-            foreach (Event evn in events)
-            {
-                if (planning(evn))
-                {
-                    Console.WriteLine(evn.Venue + "------" + evn.Price + " " + "Medium Price Range");
-                }
-               // else
-                //{
-                //    Console.WriteLine("There is no price of that range");
-                //}
-            }
-        }
-            
+        public string Name { get; set; }
+        public int SchoolFees { get; set; }
+        public string School { get; set; }
+        public string Department { get; set; }
+
+        public string Level { get; set; }
     }
+
 }
